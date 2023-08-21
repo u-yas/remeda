@@ -3,7 +3,15 @@
 
   "extends": "@tsconfig/recommended/tsconfig.json",
 
-  "include": ["src", "test", "**/.eslintrc.js", "*.config.js", "*.config.ts"],
+  "include": [
+    "src",
+    "test",
+    "docs/**/*.ts",
+    "docs/**/*.tsx",
+    "**/.eslintrc.js",
+    "**/*.config.js",
+    "**/*.config.ts"
+  ],
 
   "compilerOptions": {
     // TYPE CHECKING

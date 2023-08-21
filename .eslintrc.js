@@ -9,13 +9,14 @@ module.exports = {
     sourceType: 'module',
   },
 
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', 'react-refresh'],
 
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:@typescript-eslint/strict',
+    'plugin:react-hooks/recommended', // docs project use react
     'prettier',
   ],
 
@@ -55,6 +56,13 @@ module.exports = {
     // reserved keyword, but it's recommended to use a variadic instead (e.g.
     // `function foo(...args: readonly unknown[])`)
     'prefer-rest-params': 'off',
+
+    // for docs/*
+    'react-refresh/only-export-components': [
+      'warn',
+      { allowConstantExport: true },
+    ],
+    '@typescript-eslint/no-non-null-assertion': 'off',
   },
 
   overrides: [
